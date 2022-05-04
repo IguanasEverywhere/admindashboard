@@ -29,6 +29,13 @@ body {
       "sidebar main-content main-content main-content main-content main-content";
 }
 
+
+/* Sidebar ********/
+
+.logo-img {
+    color: white;
+}
+
 #sidebar {
     background-color: var(--dark-blue);
     grid-area: sidebar;
@@ -61,14 +68,12 @@ body {
     justify-self: start;
 }
 
-.logo-img {
-    color: white;
-}
+
+/* Header ********/
 
 #header {
     background-color: white;
     grid-area: header;
-
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-areas:
@@ -76,16 +81,8 @@ body {
     "header-bottom-left . header-bottom-right";
     padding: 10px 3% 20px 3%;
     row-gap: 15px;
+    box-shadow: 0 0 5px;
    
-}
-
-#main-content {
-    background-color: var(--gray-background);
-    grid-area: main-content;
- 
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-
 }
 
 .user-icon-lg {
@@ -154,6 +151,17 @@ button {
     height: 30px;
 }
 
+
+/* Main Section ********/
+
+#main-content {
+    background-color: var(--gray-background);
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+}
+
 .cards-section {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -170,6 +178,13 @@ button {
     padding: 20px 0 0 20px;
 }
 
+.cards-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
 .card {
     background-color: white;
     height: 200px;
@@ -180,14 +195,6 @@ button {
     grid-template-rows: auto 1fr auto;
     overflow: hidden;
     gap: 10px;
-  
-}
-
-.cards-body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
 }
 
 .card-title {
